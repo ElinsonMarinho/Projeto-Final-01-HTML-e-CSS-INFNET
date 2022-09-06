@@ -1,29 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Cabin:wght@400;500;600;700&family=Montserrat&family=Nunito:ital,wght@0,400;1,300&family=PT+Sans:ital,wght@1,700&family=Roboto+Mono&family=Silkscreen&family=Work+Sans:wght@300&display=swap');
 
 
+html,body{
+        height: 100%;
+        width: 100%;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Cabin', sans-serif;
+    color: #e39b42;
 }
    
 
-.container{
-    width: 100vw;
-    max-width: 100%;
-    background-color: #ffd890;
-    color: #111;
+.page{
+  
+   background-color: #111;
+    color: #e39b42;
+    max-width: 100vw;
     font-size: 18px;
+    margin: 0;
     
 }
+
 /********HEADER********/
 
 header{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #111;
+    background-color:  #111;
     margin: 0 auto;
     width: 100%;
     height: 80px;
@@ -57,25 +65,26 @@ header nav ul {
     padding-left: 0;
     box-sizing: border-box;
     list-style: none;
-   display: flex;
+    display: flex;
 }
 
 
 header nav ul li a {
     text-decoration: none;
     margin-top: 25px;
-    padding: 15px;
-    box-sizing: border-box;
-    color:#e39b42;
+    padding: 50px;
+    color:#fff;
     font-size: 22px;
 }
+
 
 header nav ul li a:hover,
 header nav ul li a:visited
 {
-    background-color: #fff;
-    color: #e0b37c;
+    background-color: #e39b42 ;
+    color:#FFF ;
     border-radius: 5px;
+    font-weight: 600;
 }
 
 
@@ -91,11 +100,18 @@ header nav ul li a:visited
 
 #titulo{
     font-size: 38px;
-   text-align: center;
-   margin-top:25px ;
+     text-align: center;
+    margin-top:25px ;
 }
 
 /********SERVICES*********/
+
+.carousel-img{
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+}
 
 
 #sobre, #services{
@@ -142,9 +158,6 @@ h4{
     background-color: #111;
     color:  #e39b42;
     position: relative;
-   
-  
-   
 }
 
 .box1{
@@ -152,6 +165,8 @@ h4{
     float: left;
     box-sizing: border-box;
 }
+
+/*********GALERIA********/
 
 
 #galeria img{
@@ -161,34 +176,44 @@ h4{
     margin: 0 auto;
     box-sizing: border-box;
     border: 4px solid   #e39b42;
- 
+
 }
 
+
+
 #galeria img .helicopter{
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    max-width: 60%;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    max-width: 40%;
+    
 }
 
 #galeria .helicopter:hover img {
-    -moz-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    
 }
 
 
 #galeria img .airplane{
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    max-width: 60%;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    max-width: 40%;
 }
 #galeria .airplane:hover img {
-    -moz-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+  
+.modal-img{
+    width: 100%;
+    height: 400px;
+}
+
 
 
 .btn{
@@ -199,6 +224,9 @@ h4{
     border-radius: 5px;
 }
 
+/*********AGENDAMENTO************/
+
+
 #agendamento{
     background-color: #111;
     color:#e39b42;
@@ -206,8 +234,39 @@ h4{
     padding: 10px;
     text-align: center;
     font-size: 20px;
-    
 }
+
+#agendamento input{
+    background-color: #111;
+}
+
+.flash {
+    -webkit-animation-name: flash;
+    animation-name: flash;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes flash {
+    0%, 50%, 100% {
+    opacity: 1;
+    }
+    
+    25%, 75% {
+    opacity: 0;
+    }
+    }
+    
+    @keyframes flash {
+    0%, 50%, 100% {
+    opacity: 1;
+    }
+    
+    25%, 75% {
+    opacity: 0;
+    }
+    } 
 
 /*********FOOTER**********/
 
@@ -230,6 +289,16 @@ footer nav {
      margin: 0 auto;
      box-sizing: border-box;
 }
+
+@media (max-width: 482px)
+{
+  footer > nav
+   {
+    display: block;
+   }
+}
+
+
 
 footer nav #menu-footer{
     border-left: 3px solid #e39b42;
@@ -256,9 +325,19 @@ footer nav ul li a {
 
 }
 
+footer nav ul li a:hover,
+footer nav ul li a:visited
+{
+   color:#e39b42;
+   text-decoration: underline;
+
+}
+
 footer #contatos{
     color:#e39b42;
 }
+
+
 h3 {
     font-size: 20px;
     margin-bottom: 15px;
@@ -272,6 +351,23 @@ h5{
     margin-left: 10px;
     font-size: 22px;
     color:#e39b42;
+}
+
+.box-custom{
+   
+        background: rgba(253, 251, 251, 0.35);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 13.5px );
+        -webkit-backdrop-filter: blur( 13.5px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+       
+}
+
+.legenda{
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 p{
@@ -339,9 +435,6 @@ p{
 .col-md-10 {width: 83.33%;}
 .col-md-11 {width: 91.66%;}
 .col-md-12 {width: 100%;}
-
-
-
 }
 
 /*Small*/
@@ -359,15 +452,10 @@ p{
     .col-sm-10 {width: 83.33%;}
     .col-sm-11 {width: 91.66%;}
     .col-sm-12 {width: 100%;}
-
-    header{
-        flex-direction: column;
-        align-items: center;
-    }
 }
 
 /*X-Small*/
-@media (max-width: 575px) and (min-width:0) {
+@media (max-width: 575px){
     .col-xs-1 {width: 8.33%;}
     .col-xs-2 {width: 16.66%;}
     .col-xs-3 {width: 25%;}
@@ -380,34 +468,6 @@ p{
     .col-xs-10 {width: 83.33%;}
     .col-xs-11 {width: 91.66%;}
     .col-xs-12 {width: 100%;}
-
-    header{
-        height: 150px;
-        align-items: center;
-        z-index: 999;
-    }
-
-    header nav > ul{
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-        padding: 2px;
-        height: 100%;
-    }
-
-    header nav > ul > li > a:hover,
-    header nav > ul > li > a :visited {
-       background-color: #fff;
-       padding: 2px;
-    }
-
-    header .logo{
-        height: 30%;
-        width: 30%;
-      
-    }
-
-
 }
 
 
