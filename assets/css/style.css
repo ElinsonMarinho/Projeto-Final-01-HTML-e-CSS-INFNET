@@ -278,6 +278,19 @@ h4{
     }
     } 
 
+/***********TAXI AEREO*************/
+
+.taxi_img{
+    height: 50%;
+    width: 50%;
+    float: left;
+}
+
+
+
+
+
+
 /*********FOOTER**********/
 
 #footer-img img{
@@ -376,7 +389,6 @@ h5{
         -webkit-backdrop-filter: blur( 13.5px );
         border-radius: 10px;
         border: 1px solid rgba( 255, 255, 255, 0.18 );
-       
 }
 
 .legenda{
